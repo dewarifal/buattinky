@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Valentine Buat Tinkyy</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">14-02-2022</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			From = <span class="keyword">The on and only</span> Kazel<br />
+			To = <span class="keyword">The cutest fairy and mermaid</span> Tinky<br />
+			<span class="comments">Sorii kalo cuma sederhana gini, but i wanna say </span><br />
+			Happy Valentine Day! <br />
+			<span class="comments">Inget ini baik-baik</span><br />
+			Jangan Mudah Menyerah Yahh!<br />
+			<span class="comments">Jangan cuma dibaca</span><br />
+			Kalo ada apa-apa, feel free aja buat cerita kazel<br />
+			<span class="comments">Sama ini satu lagi</span><br />
+			Semangat Terus Yahh!<br />
+			<span class="comments">Inget ya, banyak orang pengen liat tinky bahagia.</span><br />
+			<span class="comments">uda gausa ngeyel. dengerin.</span><br />
+			<span class="keyword">Kazel</span> bersyukur banget <span class="keyword">bisa kenal tinky</span>;<br />
+			<span class="keyword">Tinky</span> wanita kuat, <span class="keyword">jangan dengerin apa kata mereka ya</span>;<br />
+			<span class="placeholder"/><span class="comments"> Apapun yang terjadi </span><br />
+			<span class="placeholder"/><span class="comments"> Jangan lupa untuk bahagia yaa </span><br />
+			<span class="placeholder"/>Sorii kalo kazel pernah bikin salah yaa<br />
+			<br>
+			<br>
+			dan sekali lagi, <br />
+			Happy Valentine Day my little Tinky<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					anggep aja ini gambar love xixixi
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					 Salam virtual<br/>
+					<div class="signature">- Kazel</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2022, 02, 08);
+together.setHours(8);
+together.setMinutes(48);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
